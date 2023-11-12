@@ -45,6 +45,6 @@ server.delete('/videos/:id',async (request,reply)=>{
   return reply.status(204).send();
 });
 
-server.listen({port: process.env.PORT ?? 3333,},(_,address)=>{
+server.listen({port: process.env.PORT ?? 3333,host:'0.0.0.0'},(_,address)=>{
   console.log(`server online at ${address}`);
 })
